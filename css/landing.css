@@ -36,7 +36,9 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
 }
+
 
 .btn-start-container img {
     width: 40%;
