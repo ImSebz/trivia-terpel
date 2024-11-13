@@ -7,15 +7,15 @@
 
 @font-face {
     font-family: 'Terpel Sans Display';
-    src: url(/fonts/Terpel-Sans-Display.otf);
+    src: url(../fonts/Terpel-Sans-Display.otf);
 }
 
 @font-face {
     font-family: 'Terpel Sans Medium';
-    src: url(/fonts/Terpel-Sans-Medium.otf);
+    src: url(../fonts/Terpel-Sans-Medium.otf);
 }
 
 @font-face {
     font-family: 'Terpel Sans ExtraBold';
-    src: url(/fonts/TerpelSans-ExtraBold.otf);
+    src: url(../fonts/TerpelSans-ExtraBold.otf);
 }
