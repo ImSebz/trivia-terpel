@@ -1,33 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
     const questions = [
         {
-            question: "¿Cuál es la capital de Francia?",
-            answers: ["París", "Londres", "Madrid", "Berlín"],
+            question: "La campaña de Lubricantes Terpel, Pensado en el bolsillo de los colombianos, está basada en comunicar:",
+            answers: [
+                "Beneficio Ahorro + RTB (Razones para creer del portafolio)",
+                "La mejor relación de precio Vs Calidad",
+                "Momentos de Vida + Ahorro + RTB (Razones para creer del portafolio)", // CORRECTA
+                "Ahorro en combustible y mantenimiento"
+            ],
+            correct: 2
+        },
+        {
+            question: "¿Cuántos productos Terpel Ultrek existen actualmente en el portafolio?",
+            answers: [
+                "5 para motor, 2 para diferenciales y 2 para transmisiones", // CORRECTA
+                "9 para motor",
+                "5 para motor",
+                "7 para motor y 2 para diferenciales"
+            ],
             correct: 0
         },
         {
-            question: "¿Cuál es el río más largo del mundo?",
-            answers: ["Nilo", "Amazonas", "Yangtsé", "Misisipi"],
+            question: "De acuerdo a los lineamientos de marca de Lubricantes Terpel, ¿cuál debe ser el orden de los logos en una pieza multisegmento?",
+            answers: [
+                "Terpel Celerity, Terpel Oiltec, Terpel Ultrek",
+                "Terpel Ultrek, Terpel Oiltec, Terpel Celerity", // CORRECTA
+                "Terpel Oiltec, Terpel Ultrek, Terpel Celerity",
+                "Terpel Ultrek, Terpel Celerity, Terpel Oiltec"
+            ],
             correct: 1
         },
         {
-            question: "¿Quién pintó la Mona Lisa?",
-            answers: ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Claude Monet"],
+            question: "¿Cuál es el beneficio principal del Titanio líquido en Lubricantes Terpel?",
+            answers: [
+                "Ofrecer una capa extra protectora al motor", // CORRECTA
+                "Entregar aditivos para mejorar las vibraciones del motor",
+                "Mejorar el arranque en frío y ahorro de combustible",
+                "Reducir el desgaste del motor en condiciones extremas"
+            ],
             correct: 0
         },
         {
-            question: "¿Cuál es el planeta más grande del sistema solar?",
-            answers: ["Júpiter", "Saturno", "Urano", "Neptuno"],
-            correct: 0
-        },
-        {
-            question: "¿En qué año llegó el hombre a la luna?",
-            answers: ["1969", "1959", "1979", "1989"],
-            correct: 0
-        },
-        {
-            question: "¿Cuál es el océano más grande?",
-            answers: ["Pacífico", "Atlántico", "Índico", "Ártico"],
+            question: "Terpel Ultrek 15W-40 Pro CK-4 brinda:",
+            answers: [
+                "Mayor protección para mayor rendimiento", // CORRECTA
+                "Menos vibraciones",
+                "Mejor eficiencia de combustible",
+                "Mayor durabilidad del motor"
+            ],
             correct: 0
         }
     ];
@@ -54,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         questionContainer.innerHTML = `
             <div class="question">${question.question}</div>
+            <div class="color-line"></div>
             <div class="answers">
                 ${answers.map(({ answer, index }) => `
                     <button class="answer" data-index="${index}">${answer}</button>
@@ -69,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 disableAnswers();
                 currentQuestionIndex++;
-                if (currentQuestionIndex < 2) {
+                if (currentQuestionIndex < selectedQuestions.length) {
                     setTimeout(() => showQuestion(selectedQuestions[currentQuestionIndex]), 1000);
                 } else {
                     setTimeout(showPopup, 1000);
@@ -84,20 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function enableAnswers() {
-        document.querySelectorAll('.answer').forEach(button => {
-            button.disabled = false;
-        });
-    }
-
     function showPopup() {
         questionContainer.classList.add('hidden');
         popup.classList.remove('hidden');
         popup.classList.add('show');
-        if (correctAnswers === 2) {
-            popupContent.textContent = '¡Felicidades! Has respondido correctamente las dos preguntas.';
+        if (correctAnswers === selectedQuestions.length) {
+            popupContent.textContent = '¡Felicidades! Has respondido correctamente todas las preguntas.';
         } else {
-            popupContent.textContent = 'Inténtalo de nuevo. No has respondido correctamente las dos preguntas.';
+            popupContent.textContent = 'Inténtalo de nuevo. No has respondido correctamente todas las preguntas.';
         }
     }
 
