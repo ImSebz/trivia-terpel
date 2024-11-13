@@ -88,16 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (selectedAnswer === question.correct) {
                     button.classList.add('correct');
                     correctAnswers++;
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex < selectedQuestions.length) {
+                        setTimeout(() => showQuestion(selectedQuestions[currentQuestionIndex]), 1000);
+                    } else {
+                        setTimeout(showPopup, 1000);
+                    }
                 } else {
                     button.classList.add('incorrect');
-                }
-                disableAnswers();
-                currentQuestionIndex++;
-                if (currentQuestionIndex < selectedQuestions.length) {
-                    setTimeout(() => showQuestion(selectedQuestions[currentQuestionIndex]), 1000);
-                } else {
                     setTimeout(showPopup, 1000);
                 }
+                disableAnswers();
             });
         });
     }
