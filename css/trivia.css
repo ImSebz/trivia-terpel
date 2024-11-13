@@ -29,6 +29,10 @@
     margin: 10px; 
 }
 
+.logo-container img {
+    width: 100%;
+}
+
 #question-container{
     display: flex;
     flex-direction: column;
