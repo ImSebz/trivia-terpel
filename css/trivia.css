@@ -35,13 +35,14 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 20px;
 }
 
 .question {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     padding: 30px;
     width: 70%;
     height: 400px;
@@ -69,7 +70,7 @@
 
 .answer {
     background-color: #fff;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #000;
     border: none;
     padding: 2rem;
@@ -81,10 +82,23 @@
     background-color: #666;
 }
 
+.answer.correct {
+    background-color: #FCB817;
+}
+
+.answer.incorrect {
+    background-color: #ED2025;
+}
+
 .popup {
     position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     top: 50%;
     left: 50%;
+    width: 85%;
+    height: 600px;
     transform: translate(-50%, -50%);
     background-color: #fff;
     color: #000;
@@ -97,17 +111,20 @@
 }
 
 .popup.show {
-    display: block;
+    display: flex;
     opacity: 1;
 }
 
-.popup-content {
-    margin-bottom: 1em;
+#popup-content {
+    margin-bottom: 5rem;
+    font-size: 3rem;
+
 }
 
 #popup-button {
-    background-color: #444;
+    background-color: #D8272D;
     color: #fff;
+    font-size: 2.5rem;
     border: none;
     padding: 1em;
     cursor: pointer;

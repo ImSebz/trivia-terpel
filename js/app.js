@@ -86,7 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
             button.addEventListener('click', (e) => {
                 const selectedAnswer = parseInt(e.target.getAttribute('data-index'));
                 if (selectedAnswer === question.correct) {
+                    button.classList.add('correct');
                     correctAnswers++;
+                } else {
+                    button.classList.add('incorrect');
                 }
                 disableAnswers();
                 currentQuestionIndex++;
