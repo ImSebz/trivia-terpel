@@ -1,54 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
     const questions = [
         {
-            question: "La campaña de Lubricantes Terpel, Pensado en el bolsillo de los colombianos, está basada en comunicar:",
+            question: "¿Cómo se llamada la marca de lubricantes de Terpel dirigida a moteros?",
             answers: [
-                "Beneficio Ahorro + RTB (Razones para creer del portafolio)",
-                "La mejor relación de precio Vs Calidad",
-                "Momentos de Vida + Ahorro + RTB (Razones para creer del portafolio)", // CORRECTA
-                "Ahorro en combustible y mantenimiento"
-            ],
-            correct: 2
-        },
-        {
-            question: "¿Cuántos productos Terpel Ultrek existen actualmente en el portafolio?",
-            answers: [
-                "5 para motor, 2 para diferenciales y 2 para transmisiones", // CORRECTA
-                "9 para motor",
-                "5 para motor",
-                "7 para motor y 2 para diferenciales"
-            ],
-            correct: 0
-        },
-        {
-            question: "De acuerdo a los lineamientos de marca de Lubricantes Terpel, ¿cuál debe ser el orden de los logos en una pieza multisegmento?",
-            answers: [
-                "Terpel Celerity, Terpel Oiltec, Terpel Ultrek",
-                "Terpel Ultrek, Terpel Oiltec, Terpel Celerity", // CORRECTA
-                "Terpel Oiltec, Terpel Ultrek, Terpel Celerity",
-                "Terpel Ultrek, Terpel Celerity, Terpel Oiltec"
+                "Terpel Ultrek",
+                "Terpel Celerity",// CORRECTA
+                "Terpel Oiltec", 
+                "GT 98"
             ],
             correct: 1
         },
         {
-            question: "¿Cuál es el beneficio principal del Titanio líquido en Lubricantes Terpel?",
+            question: "¿Cuál es unos de los aditivos característicos que tienen los Lubricantes Terpel Celrity y Terpel Oiltec?",
             answers: [
-                "Ofrecer una capa extra protectora al motor", // CORRECTA
-                "Entregar aditivos para mejorar las vibraciones del motor",
-                "Mejorar el arranque en frío y ahorro de combustible",
-                "Reducir el desgaste del motor en condiciones extremas"
+                "Tergas", 
+                "Titanio Líquido", // CORRECTA
+                "Esteres vegetales",
+                "Glicol"
             ],
-            correct: 0
+            correct: 1
         },
         {
-            question: "Terpel Ultrek 15W-40 Pro CK-4 brinda:",
+            question: "¿Cómo se llama la comunidad digital motera que tiene Terpel Celerity y esta presente en redes sociales?",
             answers: [
-                "Mayor protección para mayor rendimiento", // CORRECTA
-                "Menos vibraciones",
-                "Mejor eficiencia de combustible",
-                "Mayor durabilidad del motor"
+                "CelerityMoto",
+                "Bufalos Club", 
+                "De Moteros", // CORRECTA
+                "Club2Ruedas"
             ],
-            correct: 0
+            correct: 2
+        },
+        {
+            question: "¿Cuál es la campaña actual de lubricantes Terpel?",
+            answers: [
+                "Hombre y Moto son uno", 
+                "Escucha tu Motor",
+                "Somos de aquí somos de Allá",
+                "Pensados en el Bolsillo de los Colombianos" // CORRECTA
+            ],
+            correct: 3
         }
     ];
 
