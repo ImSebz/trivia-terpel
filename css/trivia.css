@@ -24,8 +24,8 @@
 
 .logo-container {
     position: absolute;
-    top: 8%;
-    left: 15%;
+    top: 5%;
+    left: 10%;
     margin: 10px; 
 }
 
@@ -46,10 +46,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.7rem;
+    font-size: 1.15rem;
     padding: 30px;
-    width: 70%;
-    height: 400px;
+    width: 85.3%;
+    height: 200px;
     background-color: #fff;
     color: #D8272D;
     position: relative;
@@ -59,7 +59,7 @@
 
 /* Línea de colores */
 .color-line {
-    width: 70%;
+    width: 85%;
     height: 10px;
     background: linear-gradient(to right, #fff, #F9DF0E, #C60B13);
     margin-top: -2px;
@@ -68,18 +68,20 @@
 
 .answers {
     display: flex;
-    width: 70%;
+    width: 80%;
     flex-direction: column;
+    margin-top: 10px;
 }
 
 .answer {
     background-color: #fff;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #000;
     border: none;
-    padding: 2rem;
+    padding: 1rem;
     margin: 1em 0;
     cursor: pointer;
+    width: 100%;
 }
 
 .answer:hover {
@@ -120,17 +122,17 @@
 }
 
 #popup-content {
-    margin-bottom: 5rem;
-    font-size: 3rem;
+    margin-bottom: 6rem;
+    font-size: 2rem;
 
 }
 
 #popup-button {
     background-color: #D8272D;
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     border: none;
-    padding: 1em;
+    padding: 1rem;
     cursor: pointer;
 }
 

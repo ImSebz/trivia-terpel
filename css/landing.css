@@ -14,13 +14,13 @@
 
 .logo-container {
     position: absolute;
-    top: 8%;
-    left: 15%;
+    top: 15%;
+    left: 10%;
     margin: 10px; 
 }
 
 .logo-container img {
-    width: 100%;
+    width: 90%;
 }
 
 
